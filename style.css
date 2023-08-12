@@ -1,0 +1,56 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.wrapper {
+    height: 100vh;
+    overflow-x: hidden;
+    overflow-y: auto;
+    perspective: 10px;
+}
+
+.container {
+    position: relative;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform-style: preserve-3d;
+    z-index: -1;
+}
+
+.galaxy {
+    transform: translateZ(-10px) scale(2.01);
+}
+
+.house {
+    transform: translateZ(-5px) scale(1.51);
+}
+
+.main-text {
+    transform: translateZ(-10px) scale(1);
+}
+
+.galaxy,
+.house {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+.main-text {
+    color: #FFF;
+    text-shadow: 0 0 5px #000;
+    font-size: 7em;
+    text-align: center;
+}
+
+.text-section {
+    background-color: #333;
+    color: #FFF;
+    padding: 20px;
+    font-size:1.5rem;
+    text-align: center;
+}
