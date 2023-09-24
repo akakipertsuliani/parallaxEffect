@@ -13,44 +13,90 @@
 .container {
     position: relative;
     height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
     transform-style: preserve-3d;
     z-index: -1;
 }
 
 .galaxy {
-    transform: translateZ(-10px) scale(2.01);
-}
-
-.house {
-    transform: translateZ(-5px) scale(1.51);
-}
-
-.main-text {
-    transform: translateZ(-10px) scale(1);
-}
-
-.galaxy,
-.house {
     position: absolute;
     width: 100%;
-    height: 100%;
+    height: 60%;
     z-index: -1;
+    transform: translateZ(-5px) scale(2);
+}
+
+.way {
+    position: absolute;
+    width: 100%;
+    height: 90%;
+    margin-top: 8%;
 }
 
 .main-text {
+    position: absolute;
+    left: -4%;
+    top: 20%;
     color: #FFF;
     text-shadow: 0 0 5px #000;
-    font-size: 7em;
+    font-size: 3rem;
     text-align: center;
+    transform: translateZ(-2px);
 }
 
 .text-section {
-    background-color: #333;
+    background-color: #053680;
     color: #FFF;
     padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
     font-size:1.5rem;
     text-align: center;
+}
+
+.text-container {
+    background-color: #6847B4;
+    color: #FFF;
+    padding: 20px;
+    font-family: monospace;
+    text-align: left;
+    transition: transform 0.5s;
+}
+
+.text-container:hover {
+    transform: scale(1.02);
+}
+
+@media screen and (max-width: 768px) {
+    .container {
+        height: 30%;
+    }
+    
+    .galaxy {
+        height: 40%;
+        width: 50%;
+        margin-bottom: auto;
+        transform: translateZ(-5px) scale(6);
+    }
+    
+    .main-text {
+        left: -5%;
+        top: -20%;
+        font-size: 1.45rem;
+        text-align: center;
+        transform: translateZ(-1.9px);
+    }
+    
+    .text-container {
+        background-color: #6847b4;
+        color: #FFF;
+        padding: 20px;
+        font-size: 1rem;
+        font-family: monospace;
+        display: -webkit-box;
+        overflow: hidden;
+        -webkit-box-orient: vertical;
+        -webkit-line-clamp: 6;
+        text-align: left;
+    }
 }
